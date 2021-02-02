@@ -1,0 +1,81 @@
+<!DOCTYPE html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JINHONG</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>JOOJINHONG</h1>
+    </header>
+    <nav>
+        <ul id="nav_ul">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="roadmap.html">ROADMAP</a></li>
+            <li><a href="ost.html">OST</a>
+                <ul id="ost_content">
+                    <li><a href="">game</a>
+                        <ul id="ost_game">
+                            <li><button id="tales_weaver">Tales Weaver</button></li>
+                            <li><button id="ragnarok">Ragnarok</button>
+                            <li><button id="battle_ground">Battle Ground</button>
+                            <li><button id="ys">YS</button>
+                            <li><button id="genesis">Genesis</button>
+                            <li><button id="portal">Portal</button>
+                        </ul>
+                    </li>
+                    <li><button id="movie">Movie</button></li>
+                </ul>
+            </li>
+            <li><a href="sign_up.html">SIGN UP</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="youtube">
+            <iframe src="https://www.youtube.com/embed/_kKCYovWdus?playlist=_kKCYovWdus,zL0A8-Ql-WA,GMciISy6apI,s10PseMEOVk,ALupkuK6OBk,mXus-agnD8g,5ysdHjaeGGU,y-sqDi4cgdI,-UZnpcufkbc,FkFB8f8bzbY,MXKNUiXgM8U,9I4WNhdCt3U,J7or0noYfMA" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        var $tales = $('<iframe src="https://www.youtube.com/embed/_kKCYovWdus?autoplay=1&loop=1&start=1" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        var $rag = $('<iframe src="https://www.youtube.com/embed/zL0A8-Ql-WA?autoplay=1&loop=1&start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        var $bg = $('<iframe src="https://www.youtube.com/embed/GMciISy6apI?autoplay=1&loop=1&start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        var $ys = $('<iframe src="https://www.youtube.com/embed/s10PseMEOVk?autoplay=1&loop=1&start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        var $gene = $('<iframe src="https://www.youtube.com/embed/ALupkuK6OBk?autoplay=1&loop=1&start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        var $portal = $('<iframe src="https://www.youtube.com/embed/mXus-agnD8g?autoplay=1&loop=1&start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+
+        var $movie = $('<iframe src="https://www.youtube.com/embed/-y-sqDi4cgdI?playlist=5ysdHjaeGGU,y-sqDi4cgdI,-UZnpcufkbc,FkFB8f8bzbY,MXKNUiXgM8U,9I4WNhdCt3U,J7or0noYfMA&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    
+        $(function(){
+            $("#tales_weaver").click(function(){
+                $('.youtube').html($tales);
+            });
+            $("#ragnarok").click(function(){
+                $('.youtube').html($rag);
+            });
+            $("#battle_ground").click(function(){
+                $('.youtube').html($bg);
+            });
+            $("#ys").click(function(){
+                $('.youtube').html($ys);
+            });
+            $("#genesis").click(function(){
+                $('.youtube').html($gene);
+            });
+            $("#portal").click(function(){
+                $('.youtube').html($portal);
+            });
+            $("#movie").click(function(){
+                $('.youtube').html($movie);
+            });
+        });
+    </script>
+</body>
+</html>

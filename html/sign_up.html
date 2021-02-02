@@ -1,0 +1,93 @@
+<!DOCTYPE html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JINHONG</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>JOOJINHONG</h1>
+    </header>
+    <nav>
+        <ul id="nav_ul">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="roadmap.html">ROADMAP</a></li>
+            <li><a href="ost.html">OST</a></li>
+            <li><a href="sign_up.html">SIGN UP</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="wrapper">
+            <h3>회원 목록</h2>
+            <table id="guestBook" border="1"></table>
+        </div>
+        
+        <!-- 회원가입 modal -->
+        <div class="sign_up_modal">
+            <div class="sign_up_form">
+                <form action="javascript:saveGuestBook();" id="signForm" autocomplete="off">
+                    <fieldset>
+                        <h3>회원가입</h3>
+                        <input type="text" name="id" id="id" placeholder="아이디" required>
+                        <input type="password" name="password" id="password" placeholder="비밀번호" required>
+                        <input type="password" name="password" id="pwchecked" placeholder="비밀번호 확인" checked required>
+                        <input type="text" name="username" id="username" placeholder="이름" required>
+                        <input type="email" name="email" id="email" placeholder="이메일 (ex:abc@naver.com)" checked required>
+                        <div class="phone_number">
+                            <input type="tel" name="tel" id="tel" placeholder="-없이 작성" checked required>
+                        </div>
+                        <div class="birth">
+                            <input type="number" name="date_of_birth" id="year" placeholder="연도" min="1900" max="2021" required>
+                            <select name="date_of_birth" id="month" required>
+                                <option value="january">January</option>
+                                <option value="february">February</option>
+                                <option value="march">March</option>
+                                <option value="april">April</option>
+                                <option value="may">May</option>
+                                <option value="june">June</option>
+                                <option value="july">July</option>
+                                <option value="august">August</option>
+                                <option value="september">September</option>
+                                <option value="october">October</option>
+                                <option value="november">November</option>
+                                <option value="december">December</option>
+                            </select>
+                            <input type="number" name="date_of_birth" id="day" placeholder="일" min="1" max="31" required>
+                        </div>
+                        
+                        <div class="select_gender" required>
+                            <label for="man">남성</label>
+                            <input type="radio" name="gender" id="man" value="남성">
+                            <label for="girl">여성</label>
+                            <input type="radio" name="gender" id="girl" value="여성">
+                        </div>
+
+                        <div class="buttons">
+                            <button type="submit" id="submit">확인</button>
+                            <button type="reset" id="cancle">취소</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        $(function(){
+            //방문자 정보 화면 출력하기
+            loadGuestBook();
+        });
+        $("#cancle").click(function(){
+            $('.sign_up_modal').hide();
+        });
+    </script>
+</body>
+</html>

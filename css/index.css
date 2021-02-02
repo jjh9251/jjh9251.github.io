@@ -1,0 +1,313 @@
+body {
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #d7f2fc, #82b0db);
+}
+header {
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    text-align: center;
+}
+h1 {
+    padding-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(235, 172, 100);
+}
+nav {
+    padding-top: 30px;
+    height: 35px;
+    width: 100%;
+    margin: 0 auto;
+}
+section {
+    height: calc(100% - 115px);
+    width: 100%;
+    margin: 0 auto;
+}
+    /* drop down menu */
+
+    /* nav 자식 ul 감추기 */
+nav ul ul { 
+    display: none;
+    padding: 0;
+}
+#ost_content {
+    position: absolute;
+    width: 65px;
+    height: 70px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+    list-style : none;
+}
+#ost_content>li {
+    width: 65px;
+    margin-top: 5px;
+    text-align: center;
+}
+#ost_content>li>a {
+    width: 65px;
+    text-decoration: none;
+    color: rgb(215, 218, 47);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+}
+#ost_game {
+    position: absolute;
+    width: 110px;
+    height: 225px;
+    top: 0%;
+    left: 70px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    text-align: center;
+    list-style : none;
+}
+    #ost_game>li{
+    margin-top: 7px;
+    width: 110px;
+    height: 30px;
+    float: left;
+    color: rgb(215, 218, 47);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+    #ost_game li>button {
+    color: rgb(215, 218, 47);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+    #nav_ul li:hover>ul {
+    display: block;
+}
+    #ost_content>li:hover>ul{
+    display: block;
+}
+#ost_content>li>a:hover {
+    opacity: 0.3;
+}
+#ost_content>li>button:hover {
+    opacity: 0.3;
+}
+#ost_game>li>button:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+#movie {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: rgb(215, 218, 47);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1rem;
+}
+#nav_ul {
+    list-style: none;
+    width: 390px;
+    height: 35px;
+    margin: 0 auto;
+    padding: 0;
+}
+#nav_ul li {
+    float: left;
+}
+#nav_ul>li>a {
+    text-decoration: none;
+    color: rgb(215, 218, 47);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+#nav_ul>li>a:hover {
+    opacity: 0.3;
+}
+span {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    position: absolute;
+    pointer-events: none;
+    background: #55b9f3;
+    box-shadow:  20px 20px 60px #489dcf, 
+                -20px -20px 60px #62d5ff;
+    transform: translate(-50%, -50%);
+    animation: blow 5s linear infinite;
+}
+
+@keyframes blow {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
+    .youtube {
+    padding-top: 50px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+    iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+table {
+    text-align: center;
+}
+#introduce {
+    width: 700px;
+    height: 600px;
+    margin: 0 auto;
+}
+#profile_photo {
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top: 10%;
+    float: left;
+}
+#self_introduction {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 15%;
+    float: left;
+}
+tr, td {
+    height: 40px;
+}
+
+#sign_up {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: rgb(215, 218, 47);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+#sign_up:hover {
+    opacity: 0.3;
+}
+.sign_up_modal {
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 463px;
+    background: linear-gradient(to left, #d0defc, #6563ac);
+    z-index: 1;
+    border-radius: 5px;
+}
+fieldset {
+    border-radius: 5px;
+    padding: 0;
+}
+h3 {
+    text-align: center;
+}
+fieldset>input {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 40px;
+}
+.phone_number {
+    text-align: center;
+    margin: 0 auto;
+}
+#tel {
+    width: 100%;
+    height: 40px;
+}
+.birth {
+    width: 390px;
+    height: 30px;
+    text-align: center;
+    margin: 0;
+    padding-top: 5px;
+}
+#year, #month, #day {
+    width: 125px;
+    height: 30px;
+}
+.select_gender {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.buttons {
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+}
+.buttons>button:hover {
+    cursor: pointer;
+}
+.buttons>hutton:active {
+    border-bottom: 0;
+}
+.buttons>button {
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.wrapper {
+    position: flex;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    height: 600px;
+    padding-top: 100px;
+}
+#guestBook {
+    margin: 0 auto;
+}
+
+button:focus {
+    outline: none;
+}
+.roadmap {
+    width: 100%;
+    height: 800px;
+}
+#animationSandbox {
+    display: block;
+}
+@keyframes backInDown {
+    0% {
+      transform: translateY(-1200px) scale(.7);
+      opacity: .7;
+    }
+  
+    80% {
+      transform: translateY(0px) scale(.7);
+      opacity: .7;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+.backInDown {
+    -webkit-animation: backInDown 1.5s;
+    animation: backInDown 1.5s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
